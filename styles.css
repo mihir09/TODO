@@ -1,0 +1,17 @@
+.header{
+    border-bottom: 2px solid white;
+}
+
+.task-counter{
+    font-size: 20px;
+}
+
+.task-list{
+    font-size: large;
+    list-style-type: none;
+}
+
+.task-completed-true {
+    text-decoration: line-through;
+    color: grey;
+}
