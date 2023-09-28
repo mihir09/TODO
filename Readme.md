@@ -8,9 +8,14 @@ Add Task<br>
 Complete Task<br>
 Remove Task<br>
 Remaining Task Count<br>
-Clear Up<br>
+Clean Up<br>
+Remove All<br>
 
 </p>
+
+## Stack
+Angular 1.2.32
+Bootstrap 5.3.1
 
 ## Local Development
 

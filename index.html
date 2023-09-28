@@ -27,7 +27,7 @@
             <br>
             <h4>Remaining Task</h3>
             <ul class="task-list">
-                <li ng-repeat="task in tasks | filter: filterTasks('completed', false)">
+                <li ng-repeat="task in tasks | filter: filterTasks('completed', false) track by $index">
                     <input type="checkbox" ng-model="task.completed">&nbsp;&nbsp;&nbsp;
                     <span class="task-completed-{{task.completed}}">{{task.description}}</span>&nbsp;&nbsp;&nbsp;
                     <i class="fa-solid fa-trash" style="scale:calc(0.7); color: red;" ng-click="removeTask(task)"></i>
@@ -35,7 +35,7 @@
             </ul>
             <h4>Completed Task</h3>
             <ul class="task-list">
-                <li ng-repeat="task in tasks | filter: filterTasks('completed', true)">
+                <li ng-repeat="task in tasks | filter: filterTasks('completed', true) track by $index">
                     <input type="checkbox" ng-model="task.completed">&nbsp;&nbsp;&nbsp;
                     <span class="task-completed-{{task.completed}}">{{task.description}}</span>&nbsp;&nbsp;&nbsp;
                     <i class="fa-solid fa-trash" style="scale:calc(0.7); color: red;" ng-click="removeTask(task)"></i>
@@ -43,6 +43,7 @@
             </ul>
 
             <button class="btn btn-warning" style="border: 0.2px solid white;" ng-click="cleanUp()">Clean Up</button>
+            <button class="btn btn-warning" style="border: 0.2px solid white;" ng-click="removeAll()">Remove All</button>
 
         </div>
     </div>
